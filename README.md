@@ -28,8 +28,7 @@ solveAdj.m           - a function which solves the adjoint ODEs from the manuscr
 computeCost.m        - a function which takes in the results of a simulation, and 
 		               and evaluated the total cost incurred 
 
-plotSIR.m	          - Three plotting functions that take in the results of a	
-plotSIRandControls.m    simulation and produce the plots from the manuscript. 
+plotSIR.m, plotControl.m, plotSIRandControls.m  	          - Three plotting functions that take in the results of a  simulation and produce the plots from the manuscript. 
   						NOTE: the actual plots that come out will be slightly 
 		      		    different than certain ones in the manuscript, since 
 		       		    some of plots required manually changing axes, legend 
