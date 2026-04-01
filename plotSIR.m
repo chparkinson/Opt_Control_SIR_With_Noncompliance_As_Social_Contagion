@@ -1,9 +1,6 @@
 function [F] = plotSIR(t,x,POSITION)
-% This is a helper function used only for plotting the results of a
-% simulation in the case that xi = 0. 
-%
-% It produces the plots from figures 3-5 that include side-by-side panels
-% with compliant dynamics and noncompliant dynamics
+%PLOTSIR Summary of this function goes here
+%   Detailed explanation goes here
 if nargin < 3
     POSITION = [];
 end

@@ -1,12 +1,6 @@
 function [F] = plotSIRandControls(t,x,a,n,m,v,POSITION)
-% This is a helper function used only for plotting the results of a
-% simulation in the case that xi >0.
-%
-% It produces the plots from figures 6,7 that include three panels with
-% compliant dynamics, noncompliant dynamics and controls.
-%
-% Any of the settings for those plots can be changed below. 
-
+%PLOTSIR Summary of this function goes here
+%   Detailed explanation goes here
 if nargin < 3
     POSITION = [];
 end
@@ -37,16 +31,17 @@ YY = ylabel("Noncompliant Pop."); YY.Interpreter = 'latex';
 %YY = ylabel("Pop. Density"); YY.Interpreter = 'latex';
 subplot(1,3,3); hold on;
 plot(t,a,'linewidth',2,'color',[0 0.7 0]);
-plot(t,n,'linewidth',2,'color','r');
-plot(t,m,'linewidth',2,'color','b');
-plot(t,v,'linestyle','--', 'linewidth',2,'color','m');
+plot(t,n,'linewidth',2,'color','b');
+plot(t,m,'linewidth',2,'color',[0.6 0 0]);
+plot(t,v,'linestyle','--', 'linewidth',2,'color',[0.9 0.4 8/30]);
 legend({'$\alpha$','$\eta$','$\mu$','$\nu$'},'Interpreter','latex','FontSize',15);
-axis([0 T -0.01 0.85]);
+axis([0 T -0.01 0.75]);
 ax = gca; 
 ax.TickLabelInterpreter = 'latex';
 ax.FontSize = 15;
 XX = xlabel('Time $\longrightarrow$'); XX.Interpreter = 'latex';
-YY = ylabel('Control value'); YY.Interpreter = 'latex';
+YY = ylabel('Control values'); YY.Interpreter = 'latex';
+F.Position = [14 1 12 5];
 
 if nargin >= 3
 F.Units = "inches";
